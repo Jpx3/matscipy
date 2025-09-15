@@ -24,4 +24,4 @@
 # directories (produced by setup.py build) will contain a much shorter file
 # that just contains the computed version number.
 
-__version__ = '@VERSION@'
+__version__ = '1.1.1'
