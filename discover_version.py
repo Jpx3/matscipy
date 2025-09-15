@@ -79,7 +79,7 @@ def get_version_from_git():
     # if dirty:
     #     version += '.dirty'
 
-    return version
+    return "1.1.1"
 
 
 try:
