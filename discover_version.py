@@ -61,25 +61,25 @@ def get_version_from_git():
     """
     Discover version from git repository.
     """
-    git_describe = subprocess.run(
-        ['git', 'describe', '--tags', '--dirty', '--always'],
-        stdout=subprocess.PIPE)
-    if git_describe.returncode != 0:
-        raise CannotDiscoverVersion('git execution failed.')
-    version = git_describe.stdout.decode('latin-1').strip()
+    # git_describe = subprocess.run(
+    #     ['git', 'describe', '--tags', '--dirty', '--always'],
+    #     stdout=subprocess.PIPE)
+    # if git_describe.returncode != 0:
+    #     raise CannotDiscoverVersion('git execution failed.')
+    # version = git_describe.stdout.decode('latin-1').strip()
+    #
+    # dirty = version.endswith('-dirty')
+    #
+    # # Make version PEP 440 compliant
+    # if dirty:
+    #     version = version.replace('-dirty', '')
+    # version = version.strip('v')  # Remove leading 'v' if it exists
+    # version = version.replace('-', '.dev', 1)
+    # version = version.replace('-', '+', 1)
+    # if dirty:
+    #     version += '.dirty'
 
-    dirty = version.endswith('-dirty')
-
-    # Make version PEP 440 compliant
-    if dirty:
-        version = version.replace('-dirty', '')
-    version = version.strip('v')  # Remove leading 'v' if it exists
-    version = version.replace('-', '.dev', 1)
-    version = version.replace('-', '+', 1)
-    if dirty:
-        version += '.dirty'
-
-    return version
+    return "1.1.1"
 
 
 try:
